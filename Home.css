@@ -24,13 +24,121 @@
   src: url(fonts/Nunito-Bold.ttf);
 }
 
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-container .aboutmes {
+  width: 100%;
+  padding: 20vh;
+}
+
+.swiper-container .contact-me {
+  display: contents;
+}
+
+.swiper-container .experience {
+  width: 100%;
+  padding-top: 10vh;
+}
+
+.swiper-container .achievements {
+  padding: 10vh;
+}
+
+.swiper-container .skillswipe skill {
+  width: 100%;
+  margin-left: 0%;
+}
+
+.swiper-container .skillswipe skill .box-block-5 {
+  width: 4%;
+  border: 2px solid #c2213b;
+  padding: 4%;
+  z-index: 2;
+  top: 84%;
+  left: -3%;
+  position: absolute;
+  display: none;
+}
+
+.swiper-container .skillswipe skill img {
+  position: relative;
+  opacity: 0.25;
+  width: 120%;
+  z-index: 0;
+  height: auto;
+}
+
+.swiper-container .skillswipe skill #skill-mod {
+  position: absolute;
+  width: 60%;
+  left: 0%;
+  margin-top: -45%;
+}
+
+.swiper-container .skillswipe skill .pskill {
+  border-left: 2px solid grey;
+  grid-area: p-skill;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr (0.5fr)[6];
+      grid-template-rows: 1fr repeat(6, 0.5fr);
+  display: -ms-grid;
+  display: grid;
+}
+
+.swiper-container .skillswipe skill .pskill h1 {
+  color: #6e6e6e;
+  font-family: 'Cairo', sans-serif;
+  padding-left: 3vw;
+  font-weight: normal;
+  letter-spacing: 0px;
+  font-size: 3.5vw;
+  text-align: left;
+}
+
+@media screen and (max-width: 520px) {
+  .swiper-container {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #111111;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 #hello_img {
   z-index: 100;
   position: relative;
   top: 40vh;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: black;
@@ -39,13 +147,8 @@ body {
   z-index: -1000;
 }
 
-@media screen and (max-width: 920px) {
-  body #particles-js {
-    display: none;
-  }
-  body #bod {
-    height: auto;
-  }
+.cursor {
+  display: none;
 }
 
 #back1lar {
@@ -134,6 +237,9 @@ body {
 }
 
 @media screen and (max-width: 520px) {
+  .cursor {
+    display: contents;
+  }
   .home #joeljaimon {
     width: 100%;
   }
@@ -153,8 +259,7 @@ body {
 }
 
 #Container {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   position: relative;
   grid-gap: 50px;
   grid-auto-rows: auto;
@@ -170,6 +275,8 @@ body {
   #Container {
     width: 100vw;
     margin-left: 0%;
+    display: -ms-grid;
+    display: grid;
     background-color: rgba(36, 36, 36, 0.7);
   }
 }
@@ -264,6 +371,9 @@ body {
 }
 
 @media screen and (max-width: 920px) {
+  .wrapper nav .nav {
+    background: fi;
+  }
   .wrapper nav .nav-links {
     position: absolute;
     right: 0px;
@@ -280,7 +390,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 80%;
+    width: 100%;
     background-color: #151515;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -297,15 +407,15 @@ body {
     cursor: pointer;
   }
   .wrapper nav .btn-flip {
-    line-height: 0px;
+    line-height: 50px;
     -webkit-transition: line-height 0.5s ease-in-out;
     transition: line-height 0.5s ease-in-out;
   }
 }
 
 .wrapper nav .nav-active {
-  -webkit-transform: translateX(-15%);
-          transform: translateX(-15%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
   background-color: black;
 }
 
@@ -358,50 +468,23 @@ body {
   display: inline-flex;
 }
 
-.btn-flip:hover:after {
-  opacity: 1;
-  -webkit-transform: translateY(0) rotateX(0);
-          transform: translateY(0) rotateX(0);
-}
-
 .btn-flip:hover:before {
-  opacity: 0;
-  -webkit-transform: translateY(50%) rotateX(90deg);
-          transform: translateY(50%) rotateX(90deg);
-}
-
-.btn-flip:after {
-  top: 0;
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 2vw;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  position: absolute;
-  text-align: center;
-  text-align: center;
-  background: #c2213b;
-  content: attr(data-back);
-  -webkit-transform: translateY(-50%) rotateX(90deg);
-          transform: translateY(-50%) rotateX(90deg);
+  border-bottom: 2px solid #c2213b;
 }
 
 .btn-flip:before {
-  top: 0;
+  top: 2px;
   opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 2vw;
   text-align: center;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   position: relative;
   content: attr(data-front);
-  -webkit-transform: translateY(0) rotateX(0);
-          transform: translateY(0) rotateX(0);
+  border-bottom: 2px solid #121212;
+  -webkit-transition: border-bottom 0.5s;
+  transition: border-bottom 0.5s;
 }
 
 about {
@@ -514,6 +597,13 @@ about .box-block-3 {
   }
 }
 
+experience h1 {
+  color: #6e6e6e;
+  font-size: 3.5vw;
+  text-align: center;
+  font-family: Nunito;
+}
+
 experience img {
   opacity: 0.3;
   height: auto;
@@ -527,7 +617,7 @@ experience .on-exp {
   position: absolute;
   width: 80%;
   margin-left: 10%;
-  margin-top: -52%;
+  margin-top: -58%;
 }
 
 experience .on-exp #exp-panel {
@@ -546,18 +636,19 @@ experience .on-exp #exp-panel .sec-exp {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto-fit;
       grid-template-rows: auto-fit;
-  color: #c2213b;
 }
 
 experience .on-exp #exp-panel .sec-exp h1 {
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-family: Nunito;
   text-align: center;
+  color: #c2213b;
 }
 
 experience .on-exp #exp-panel .sec-exp p {
   font-family: Nunito;
   font-size: 1.2vw;
+  color: #c8c8c8;
 }
 
 experience .on-exp #exp-panel .sec-exp img {
@@ -567,6 +658,13 @@ experience .on-exp #exp-panel .sec-exp img {
 }
 
 @media screen and (max-width: 520px) {
+  experience h1 {
+    color: #6e6e6e;
+    font-size: 6.5vw;
+    text-align: center;
+    border-bottom: 2px solid #c2213b;
+    font-family: Nunito;
+  }
   experience img {
     opacity: 0.3;
     height: 1600px;
@@ -601,9 +699,10 @@ experience .on-exp #exp-panel .sec-exp img {
     color: #c2213b;
   }
   experience .on-exp #exp-panel .sec-exp h1 {
-    font-size: 6.5vw;
+    font-size: 5.5vw;
     font-family: Nunito;
     text-align: center;
+    border-bottom: none;
   }
   experience .on-exp #exp-panel .sec-exp p {
     font-family: Nunito;
@@ -660,7 +759,7 @@ skill .pskill {
 }
 
 skill .pskill h1 {
-  color: #8f8f8f;
+  color: #6e6e6e;
   font-family: 'Cairo', sans-serif;
   padding-left: 3vw;
   font-weight: normal;
@@ -1127,6 +1226,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
 
 .contact-me {
   position: relative;
+  display: none;
 }
 
 .contact-me .contact-me-content {
@@ -1184,11 +1284,11 @@ achievements .certi-view .certi:not(:nth-child(6)) {
 
 @media screen and (max-width: 520px) {
   .contact-me {
+    display: contents;
     background-color: #161616;
-    height: 500px;
   }
   .contact-me .contact-me-content {
-    height: auto;
+    height: 100px;
   }
   .contact-me .contact-me-content #email {
     color: #6e6e6e;
@@ -1198,15 +1298,15 @@ achievements .certi-view .certi:not(:nth-child(6)) {
   }
   .contact-me .contact-me-content .contact-title {
     text-align: center;
-    color: #e2e2e2;
+    color: #c2213b;
     font-size: 8vw;
-    font-family: 'Oswald', sans-serif;
+    font-family: Nunito;
     position: relative;
   }
   .contact-me .contact-me-content .contact-section {
     z-index: 100;
-    background-color: #333333;
-    height: 400px;
+    background-color: #181818;
+    height: 100px;
     position: relative;
     width: 80vw;
     margin-top: 2%;
@@ -1221,18 +1321,46 @@ achievements .certi-view .certi:not(:nth-child(6)) {
             justify-content: space-evenly;
     width: 90%;
     margin-left: 0%;
-    bottom: 15%;
+    bottom: 70%;
     position: absolute;
   }
   .contact-me .contact-me-content .contact-section .social img {
     position: absolute;
-    width: 6.5vw;
-    height: 6.5vw;
+    width: 7.5vw;
+    height: 7.5vw;
   }
   .contact-me .contact-me-content .contact-section .social .con a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+
+#menu {
+  z-index: 1000;
+  position: absolute;
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  border: #616161 solid 1px;
+  background-color: transparent;
+  width: 0.8vw;
+  height: 0.8vw;
+  border-radius: 0.2vw;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c2213b;
+  border: none;
+}
+
+.swiper-button-prev {
+  color: whitesmoke;
+}
+
+.swiper-button-next {
+  color: whitesmoke;
 }
 /*# sourceMappingURL=Home.css.map */

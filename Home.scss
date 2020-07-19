@@ -22,6 +22,105 @@ $speed: 0.4s;
 $color:#c2213b;
 // $color:#02a8a0;
 // $color:#FB5252;
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    .aboutmes{
+        width: 100%;
+        padding: 20vh;
+    }
+    .contact-me{
+        display: contents;
+    }
+    .experience{
+        width: 100%;
+        padding-top: 10vh;
+    }
+    .achievements{
+        padding: 10vh;
+    }
+    .skillswipe{
+        skill{
+            width: 100%;
+            margin-left: 0%;
+        
+        
+            .box-block-5{
+                width: 4%;
+                border: 2px solid $color;
+                padding: 4%;
+                z-index: 2;
+                top: 84%;
+                left: -3%;
+                position: absolute;
+                display:none;
+            }
+        
+            img{
+                position: relative;
+                opacity: 0.25;
+                width: 120%;
+                z-index: 0;
+                height: auto;
+            }
+            #skill-mod{
+                position: absolute;
+                width: 60%;
+                left: 0%;
+                margin-top: -45%;
+                
+            }
+            .pskill{
+                border-left: 2px solid grey;
+                grid-area: p-skill;
+                grid-template-columns: 100%;
+                grid-template-rows: 1fr repeat(6,0.5fr);
+                display: grid;
+                
+                h1{
+                    color:rgb(110, 110, 110);
+                    font-family: 'Cairo', sans-serif;
+                    padding-left: 3vw;
+                    font-weight: normal;
+                    letter-spacing: 0px;
+                    font-size: 3.5vw;
+                    text-align: left;
+                    
+                }
+            
+            }
+            
+        
+}}}
+@media screen and (max-width: 520px){
+.swiper-container{
+    display: none;
+}
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: rgb(17, 17, 17);
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+
+
+}
 
 #hello_img{
     z-index: 100;
@@ -29,40 +128,39 @@ $color:#c2213b;
     top: 40vh;
 
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 body{
+    // overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     background-repeat: no-repeat;
     background-size: 100%; 
     background-color: rgb(0, 0, 0);
     margin: 0 auto;
     overflow-x: hidden;
     z-index: -1000;
-
-    @media screen and (max-width: 920px){
-        #particles-js{
-            display: none;
-        }
-        #bod{
-            height: auto;
-        }
-    }
-      
 }
-
-//.cursor{
+.cursor{
+    display: none;
+}
+// .cursor{
 //    width: 3rem;
-  //  height: 3rem;
- //   border: 2px solid white;
- //   border-radius: 50%;
- //   position: absolute;
- //   transform: translate(-50%,-50%);
-  //  pointer-events: none;
- //   transition: all 1s ease;
+//    height: 3rem;
+//    border: 2px solid white;
+//    border-radius: 50%;
+//    position: absolute;
+//    transform: translate(-50%,-50%);
+//    pointer-events: none;
+//    transition: all 1s ease;
 //    transition-property: background, transform;
-//}
-//.wrapper-cursor{
+// }
+// .wrapper-cursor{
 //    transform: scale(2);
- //   background: white;
-//}
+//    background: white;
+// }
 
 //https://youtu.be/y9nlfqT4s9s scroll effect
 
@@ -81,7 +179,7 @@ body{
     padding: 15px;
     top: 10px;
     z-index: 100;
-
+    
     .icon-home{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -115,7 +213,7 @@ body{
 }
 .home{
 #joeljaimon{
-        
+    
         font-family: 'Cairo', sans-serif;
         margin: 0 auto;
         padding: 10px;
@@ -147,6 +245,9 @@ body{
  
        }}
        @media screen and (max-width: 520px){
+        .cursor{
+            display: contents;
+        }   
         .home{
             #joeljaimon{
                 width: 100%;
@@ -170,7 +271,7 @@ body{
       
       
 #Container{
-    display: grid;
+    display: none;
     position: relative;
     grid-gap: 50px;
     grid-auto-rows: auto; 
@@ -182,6 +283,7 @@ body{
     @media screen and (max-width: 520px){
         width: 100vw;
         margin-left: 0%;
+        display: grid;
         background-color: rgba(36, 36, 36, 0.7);
     }
 
@@ -262,7 +364,9 @@ body{
         }
 
         @media screen and (max-width: 920px){
-            
+            .nav{
+                background: fi;
+            }
             .nav-links{
                 position: absolute;
                 right: 0px;
@@ -272,7 +376,7 @@ body{
                 flex-direction: column;
                 border-bottom: 1px solid $color;
                 align-items: center;
-                width: 80%;
+                width: 100%;
                 background-color: rgb(21, 21, 21);
                 transform: translateX(100%);
                 transition: transform 0.5s ease-in;
@@ -292,14 +396,15 @@ body{
 
             .btn-flip{
 
-                line-height: 0px;
+                line-height: 50px;
                 transition: line-height 0.5s ease-in-out;
 
             }
         }
         .nav-active{
-            transform: translateX(-15%);
+            transform: translateX(0%);
             background-color: black;
+            
         }
 
         @keyframes navLinkFade {
@@ -339,45 +444,27 @@ body{
 	
 	&:hover{
 		
-		&:after{
-			opacity: 1;
-			transform: translateY(0) rotateX(0);
-		}
-		
 		&:before{
-			opacity: 0;
-            transform: translateY(50%) rotateX(90deg);
+            border-bottom: 2px solid $color;
             
 		}
 	}
 	
-	&:after{
-		top: 0;
-		opacity: 0;
-        display: flex;
-        padding: 0 2vw;
-		transition: $speed;
-        position: absolute;
-        text-align: center;
-        text-align: center;
-		background: $color; 
-		content: attr(data-back);
-		transform: translateY(-50%) rotateX(90deg);
-	}
 	
 	&:before{
-		top: 0;
+		top: 2px;
 		opacity: 1;
 		display: flex;
 		padding: 0 2vw;
         text-align: center;
-		transition: $speed;
 		position: relative;
-		content: attr(data-front);
-        transform: translateY(0) rotateX(0);
+        content: attr(data-front);
+        border-bottom: 2px solid rgb(18, 18, 18);
+        transition: border-bottom 0.5s;
         
 	}
 }
+
 about{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -485,6 +572,12 @@ about{
 
 //my experience
 experience{
+    h1{
+        color: rgb(110, 110, 110);
+        font-size: 3.5vw;
+        text-align: center;
+        font-family: Nunito;
+    }
     img{
         opacity: 0.3;
         height: auto;
@@ -497,7 +590,7 @@ experience{
         position: absolute;
         width: 80%;
         margin-left: 10%;
-        margin-top: -52%;
+        margin-top: -58%;
     #exp-panel{
         
         display: grid;
@@ -508,16 +601,20 @@ experience{
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: auto-fit;
-            color: $color;
+           
 
             h1{
-                font-size: 2vw;
+                font-size: 1.8vw;
                 font-family: Nunito;
                 text-align: center;
+                color: $color;
+                
             }
             p{
                 font-family: Nunito;
                 font-size: 1.2vw;
+                color: rgb(200, 200, 200)
+                
 
             }
             img{
@@ -533,6 +630,13 @@ experience{
 @media screen and (max-width: 520px){
 
     experience{
+        h1{
+            color: rgb(110, 110, 110);
+            font-size: 6.5vw;
+            text-align: center;
+            border-bottom: 2px solid $color;
+            font-family: Nunito;
+        }
         img{
             opacity: 0.3;
             height: 1600px;
@@ -560,9 +664,10 @@ experience{
                 color: $color;
     
                 h1{
-                    font-size: 6.5vw;
+                    font-size: 5.5vw;
                     font-family: Nunito;
                     text-align: center;
+                    border-bottom:none;
                 }
                 p{
                     font-family: Nunito;
@@ -622,7 +727,7 @@ skill{
         display: grid;
         
         h1{
-            color:rgb(143, 143, 143);
+            color:rgb(110, 110, 110);
             font-family: 'Cairo', sans-serif;
             padding-left: 3vw;
             font-weight: normal;
@@ -970,6 +1075,7 @@ achievements{
 }
 .contact-me{
     position: relative;
+    display: none;
 .contact-me-content{
 
     height: 26vw + 4vw;
@@ -1024,12 +1130,13 @@ achievements{
 @media screen and (max-width: 520px){
     
 .contact-me{
+    display: contents;
     background-color: rgba(22, 22, 22,1);
-    height: 500px;
+
 
 .contact-me-content{
 
-    height: auto;
+    height: 100px;
 
 
     #email{
@@ -1042,16 +1149,16 @@ achievements{
 
     .contact-title{
         text-align: center;
-        color: rgb(226, 226, 226);
+        color: $color;
         font-size: 8vw;
-        font-family: 'Oswald', sans-serif;
+        font-family: Nunito;
         position: relative;
     }
 
     .contact-section{
         z-index: 100;
-        background-color: #333333;
-        height: 400px;
+        background-color: #181818;
+        height: 100px;
         position: relative;
         width: 80vw;
         margin-top: 2%;
@@ -1064,13 +1171,15 @@ achievements{
             justify-content: space-evenly;
             width: 90%;
             margin-left: 0%;
-            bottom: 15%;
+            bottom: 70%;
+            
             position: absolute;
                 img{
                     
                     position: absolute;
-                    width: 6.5vw;
-                    height: 6.5vw;
+                    width: 7.5vw;
+                    height: 7.5vw;
+                    
                 }
                 .con a{
                     align-self: center;
@@ -1081,5 +1190,27 @@ achievements{
 }
 
 }
+#menu{
+    z-index: 1000;
+    position: absolute;
+    display: none;
+}
+.swiper-pagination-bullet {
+    opacity: 1;
+    border: rgb(97, 97, 97) solid 1px;
+    background-color: transparent;
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 0.2vw;
+}
+.swiper-pagination-bullet-active {
+    background-color: $color;
+    border: none;
+}
+.swiper-button-prev {
+    color: whitesmoke; 
+}
 
-
+.swiper-button-next {
+    color: whitesmoke; 
+}
