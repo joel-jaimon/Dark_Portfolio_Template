@@ -20,7 +20,7 @@
 }
 $speed: 0.4s;
 $color:#c2213b;
-
+// $color:#FB5252;
 
 #hello_img{
     z-index: 100;
@@ -382,6 +382,7 @@ about{
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     background: rgba(21, 21, 21,0.8);
+    
     h1{
         color: $color;
         font-family: Nunito;
@@ -391,6 +392,7 @@ about{
         margin-left: 10%;
         font-size: 3.5vw;
         border-bottom: 2px solid rgb(110, 110, 110);
+        
     }
     p{
         margin-top: 0%;
@@ -411,11 +413,11 @@ about{
     }
     .box-block-1{
         width: 50%;
-        border: 2px solid $color;
+        border: 0.6vw solid $color;
         padding: 22%;
-        z-index: 2;
-        top: 12%;
-        left: -5%;
+        z-index: 0;
+        top: 6%;
+        left: -3%;
         position: absolute;
     }
 
@@ -424,8 +426,8 @@ about{
         border: 2px solid $color;
         padding: 4%;
         z-index: 2;
-        top: 60%;
-        left: 90%;
+        top: 41%;
+        left: 94%;
         position: absolute;
     }
     .box-block-3{
@@ -433,8 +435,8 @@ about{
         border: 2px solid grey;
         padding: 6%;
         z-index: 2;
-        top: 50%;
-        left: 92%;
+        top: 36%;
+        left: 87%;
         position: absolute;
     }}
     @media screen and (max-width: 520px){
@@ -497,29 +499,49 @@ about{
 skill{
     width: 120%;
     margin-left: -10%;
-    background-color: rgba(21, 21, 21,0.8);
+
+
+    .box-block-5{
+        width: 4%;
+        border: 2px solid $color;
+        padding: 4%;
+        z-index: 2;
+        top: 84%;
+        left: -3%;
+        position: absolute;
+        display:none;
+    }
+
+    img{
+        position: relative;
+        opacity: 0.25;
+        width: 100%;
+        z-index: 0;
+        height: auto;
+    }
     #skill-mod{
+        position: absolute;
         width: 60%;
-        margin: 0 auto;
-        height: 80vh;
+        margin-left: 10%;
+        margin-top: -45%;
         
     }
     .pskill{
-       
+        border-left: 2px solid grey;
         grid-area: p-skill;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr repeat(4,0.5fr);
+        grid-template-rows: 1fr repeat(6,0.5fr);
         display: grid;
-
+        
         h1{
-            color:rgb(226, 226, 226);
+            color:rgb(143, 143, 143);
             font-family: 'Cairo', sans-serif;
-            padding-left: 1.5vw;
+            padding-left: 3vw;
             font-weight: normal;
             letter-spacing: 0px;
             font-size: 3.5vw;
-            text-align: center;
-            color: $color;
+            text-align: left;
+            
             
             
             
@@ -539,10 +561,9 @@ skill{
     }
 }
     .progress {
-        background: rgb(226, 226, 226);
+        background: rgb(194, 194, 194);
         justify-content: flex-start;
         position: relative;
-        padding: 0 1px;
         padding-bottom: 6px;
         display: flex;
         height: 6px;
@@ -586,6 +607,35 @@ skill{
                 100% { width: 40%; }
                 }
         }
+        .m-1{
+            animation: skill-level-1 4s normal forwards;
+            @keyframes skill-level-1 {
+                0% { width: 0; }
+                100% { width: 100%; }
+                }
+        }
+        .m-2{
+            animation: skill-level-2 4s normal forwards;
+            @keyframes skill-level-2 {
+                0% { width: 0; }
+                100% { width: 60%; }
+                }
+        }
+        .m-3{
+            animation: skill-level-3 4s normal forwards;
+            @keyframes skill-level-3 {
+                0% { width: 0; }
+                100% { width: 40%; }
+                }
+        }
+        .m-4{
+            animation: skill-level-4 4s normal forwards;
+            @keyframes skill-level-4 {
+                0% { width: 0; }
+                100% { width: 40%; }
+                }
+        }
+
 
         
     }

@@ -445,11 +445,11 @@ about img {
 
 about .box-block-1 {
   width: 50%;
-  border: 2px solid #c2213b;
+  border: 0.6vw solid #c2213b;
   padding: 22%;
-  z-index: 2;
-  top: 12%;
-  left: -5%;
+  z-index: 0;
+  top: 6%;
+  left: -3%;
   position: absolute;
 }
 
@@ -458,8 +458,8 @@ about .box-block-2 {
   border: 2px solid #c2213b;
   padding: 4%;
   z-index: 2;
-  top: 60%;
-  left: 90%;
+  top: 41%;
+  left: 94%;
   position: absolute;
 }
 
@@ -468,8 +468,8 @@ about .box-block-3 {
   border: 2px solid grey;
   padding: 6%;
   z-index: 2;
-  top: 50%;
-  left: 92%;
+  top: 36%;
+  left: 87%;
   position: absolute;
 }
 
@@ -527,34 +527,53 @@ about .box-block-3 {
 skill {
   width: 120%;
   margin-left: -10%;
-  background-color: rgba(21, 21, 21, 0.8);
+}
+
+skill .box-block-5 {
+  width: 4%;
+  border: 2px solid #c2213b;
+  padding: 4%;
+  z-index: 2;
+  top: 84%;
+  left: -3%;
+  position: absolute;
+  display: none;
+}
+
+skill img {
+  position: relative;
+  opacity: 0.25;
+  width: 100%;
+  z-index: 0;
+  height: auto;
 }
 
 skill #skill-mod {
+  position: absolute;
   width: 60%;
-  margin: 0 auto;
-  height: 80vh;
+  margin-left: 10%;
+  margin-top: -45%;
 }
 
 skill .pskill {
+  border-left: 2px solid grey;
   grid-area: p-skill;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 1fr (0.5fr)[4];
-      grid-template-rows: 1fr repeat(4, 0.5fr);
+  -ms-grid-rows: 1fr (0.5fr)[6];
+      grid-template-rows: 1fr repeat(6, 0.5fr);
   display: -ms-grid;
   display: grid;
 }
 
 skill .pskill h1 {
-  color: #e2e2e2;
+  color: #8f8f8f;
   font-family: 'Cairo', sans-serif;
-  padding-left: 1.5vw;
+  padding-left: 3vw;
   font-weight: normal;
   letter-spacing: 0px;
   font-size: 3.5vw;
-  text-align: center;
-  color: #c2213b;
+  text-align: left;
 }
 
 skill .Other-skills {
@@ -569,12 +588,11 @@ skill .Other-skills a {
 }
 
 skill .progress {
-  background: #e2e2e2;
+  background: #c2c2c2;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
-  padding: 0 1px;
   padding-bottom: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -674,6 +692,62 @@ skill .m-4 {
   100% {
     width: 40%;
   }
+}
+
+@keyframes skill-level-4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+skill .m-1 {
+  -webkit-animation: skill-level-1 4s normal forwards;
+          animation: skill-level-1 4s normal forwards;
+}
+
+@keyframes skill-level-1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+skill .m-2 {
+  -webkit-animation: skill-level-2 4s normal forwards;
+          animation: skill-level-2 4s normal forwards;
+}
+
+@keyframes skill-level-2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+skill .m-3 {
+  -webkit-animation: skill-level-3 4s normal forwards;
+          animation: skill-level-3 4s normal forwards;
+}
+
+@keyframes skill-level-3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+skill .m-4 {
+  -webkit-animation: skill-level-4 4s normal forwards;
+          animation: skill-level-4 4s normal forwards;
 }
 
 @keyframes skill-level-4 {
