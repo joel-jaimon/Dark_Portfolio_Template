@@ -14,16 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="three-dots.css" rel="stylesheet">
     <link rel="stylesheet" media="screen" type = "text/css" href ="Home.css">
-    <div class = "do">
-      
-      <div class="dot">
-      <div class="dot-bricks"></div>
-      </div>
+
     </div>
 
   </head>
 
     <body id = "body">
+
+          <!-- Mob-section-start -->
       <div class = "ursor">
       <img src="/image/clay-banks-u27Rrbs9Dwc-unsplash.jpg" id="myVideo">
 
@@ -70,10 +68,11 @@
             <h4>My Portfolio</h4>
           </div>
           <ul class="nav-links">
-          <li><a href=# class="btn-flip"  data-front="About Me"></a></li>
-          <li><a href="#" class="btn-flip"  data-front="skills"></a></li>
-          <li><a href="#" class="btn-flip"  data-front="achievements"></a></li>
-          <li><a href="#" class="btn-flip"  data-front="contact"></a></li>
+          <li><a href="#about-anchor" class="btn-flip"  data-front="About Me"></a></li>
+          <li><a href="#exp-anchor" class="btn-flip"  data-front="Experience"></a></li>
+          <li><a href="#achievement-anchor" class="btn-flip"  data-front="achievements"></a></li>
+          <li><a href="#skill-anchor" class="btn-flip"  data-front="skills"></a></li>
+          <li><a href="#contact-anchor" class="btn-flip"  data-front="contact"></a></li>
           </ul>     
           <div class="mob-button">
             <div class="linea"></div>
@@ -82,6 +81,8 @@
           </div>
         </nav>
         </div>
+
+        <a id="about-anchor"></a>
         
         <about>
           
@@ -96,7 +97,7 @@
           <span class="box-block-2"></span>
           <span class="box-block-3"></span>
         </about>
-
+        <a id="exp-anchor"></a>
         <experience>
           
           <img src="/image/paul-gilmore-8kDOOrs608I-unsplash.jpg">
@@ -123,7 +124,7 @@
           </div>
           </div>
         </experience>
-
+        <a id="achievement-anchor"></a>
         <achievements>
           <h1>Achievement</h1>
           <div class="certi-view">
@@ -154,7 +155,7 @@
         </div>
         </achievements>
 
-        
+        <a id="skill-anchor"></a>
         <skill>
           <img src="/image/emile-perron-xrVDYZRGdw4-unsplash.jpg">
  
@@ -181,27 +182,19 @@
             </div>
             <div class="Other-skills">
               <a>HTML/CSS</a>
-              <div class="progress"><div class="skill m-1"></div></div>
+              <div class="progress"><div class="skill m-5"></div></div>
             </div>
             <div class="Other-skills">
               <a>JavaScript</a>
-              <div class="progress"><div class="skill m-2"></div></div>
+              <div class="progress"><div class="skill m-6"></div></div>
             </div>
 
             </div>
             </div>
         </skill>
-
-        <!-- <projects>
-          <div><h1>My Experience</h1></div>
-          <div>
-
+    
           </div>
-        </projects> -->
-
-
-        
-          </div>
+          <a id="contact-anchor"></a>
           <div class="contact-me">
   <div class="contact-me-content">
   <div class="contact-title">
@@ -229,14 +222,15 @@
         </a>
       </div>
       </div>
+      <div id="license">Web Template By <a href="https://joeljaimon.herokuapp.com">Joel.</a> </div>
     </div>
 
   </div>
 </div>
         </div>
+    <!-- Mob-section-end -->
 
-
-    <!-- Swiper -->
+    <!-- PC-section-start -->
     
     <div class="swiper-container">
       <div class="theme-but">
@@ -382,11 +376,11 @@
                 </div>
                 <div class="Other-skills">
                   <a>HTML/CSS</a>
-                  <div class="progress"><div class="skill m-1"></div></div>
+                  <div class="progress"><div class="skill m-5"></div></div>
                 </div>
                 <div class="Other-skills">
                   <a>JavaScript</a>
-                  <div class="progress"><div class="skill m-2"></div></div>
+                  <div class="progress"><div class="skill m-6"></div></div>
                 </div>
     
                 </div>
@@ -421,20 +415,20 @@
                     </a>
                   </div>
                   </div>
+                  
                 </div>
+                <div id="license" class="pmo" >Web Template By <a href="https://joeljaimon.herokuapp.com">Joel</a> </div>
             
               </div>
             </div>
           </div>
       </div>
-      <!-- Add Pagination -->
+      
       <div class="swiper-pagination"></div>
   </div>
-
-  <!-- Swiper JS -->
+               <!-- PC-section-end -->
+  
         <script src="/js/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',

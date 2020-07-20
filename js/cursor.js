@@ -6,6 +6,7 @@ let text_x = document.querySelectorAll(".pmo");
 let image_x = document.querySelectorAll(".image-mouse");
 let inner_x = document.querySelectorAll(".inner");
 
+
 window.addEventListener("mousemove", cursor);
 
 function cursor(e){

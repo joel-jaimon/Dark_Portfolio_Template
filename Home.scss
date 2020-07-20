@@ -709,7 +709,7 @@ about{
                 border: 2px solid var(--color);
                 padding: 45%;
                 z-index: 2;
-                margin-top: 8%;
+                margin-top: 18%;
                 left: 3%;
                 position: absolute;
             }
@@ -1277,7 +1277,7 @@ achievements{
             grid-template-rows: 1fr;
             width: 50%;
             margin-left: 20%;
-            bottom: 30%;
+            bottom: 40%;
             position: absolute;
                 img{
                     position: absolute;
@@ -1292,6 +1292,29 @@ achievements{
         }
     }
 }
+
+#license{
+    z-index: 2;
+    position: absolute;
+    font-size: 20px;
+    font-family: Nunito;
+    bottom: 22px;
+    width: 51%;
+    margin-left: 24.5%;
+    color: grey;
+    a{
+        color: var(--color);
+        text-decoration: none;
+        
+
+        &:active{
+
+            color: var(--color);
+
+        }
+    }
+}
+
 @media screen and (max-width: 520px){
     
 .contact-me{
@@ -1301,7 +1324,7 @@ achievements{
 
 .contact-me-content{
 
-    height: 100px;
+    height: 200px;
 
 
     #email{
@@ -1323,7 +1346,7 @@ achievements{
     .contact-section{
         z-index: 100;
         background-color: #181818;
-        height: 100px;
+        height: 200px;
         position: relative;
         width: 80vw;
         margin-top: 2%;
