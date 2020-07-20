@@ -1,5 +1,5 @@
 let mouseCursor = document.querySelector(".cursor");
-let joel = document.querySelector("#Joel")
+let joel = document.querySelector(".Other-skills")
 let wrapper_ = document.querySelectorAll('.nav-links li');
 
 window.addEventListener("mousemove", cursor);
