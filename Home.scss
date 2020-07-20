@@ -1,31 +1,19 @@
-
-@import url(https://fonts.googleapis.com/css?family=Lato);
-  
-@font-face {
-  font-family: bravery;
-  src: url(fonts/bravery.ttf);
-}
 * {box-sizing: border-box;}
 @font-face{
     font-family: Nunito;
     src: url(fonts/Nunito-Regular.ttf);
 }
-@font-face{
-    font-family: WelcomeSummer;
-    src: url(fonts/WelcomeSummer-GOqXP.ttf);
-}
+
 @font-face{
     font-family: NunitoB;
     src: url(fonts/Nunito-Bold.ttf);
 }
 
 $speed: 0.4s;
+
 :root{
     --color:#c2213b;
 }
-
-// var(--color):#02a8a0;
-// var(--color):#FB5252;
 
 .theme-but{
     display: grid;
@@ -955,36 +943,20 @@ skill{
                 100% { width: 40%; }
                 }
         }
-        .m-1{
+        .m-5{
             animation: skill-level-1 4s normal forwards;
             @keyframes skill-level-1 {
                 0% { width: 0; }
                 100% { width: 100%; }
                 }
         }
-        .m-2{
+        .m-6{
             animation: skill-level-2 4s normal forwards;
             @keyframes skill-level-2 {
                 0% { width: 0; }
                 100% { width: 60%; }
                 }
         }
-        .m-3{
-            animation: skill-level-3 4s normal forwards;
-            @keyframes skill-level-3 {
-                0% { width: 0; }
-                100% { width: 40%; }
-                }
-        }
-        .m-4{
-            animation: skill-level-4 4s normal forwards;
-            @keyframes skill-level-4 {
-                0% { width: 0; }
-                100% { width: 40%; }
-                }
-        }
-
-
         
     }
 @media screen and (max-width: 520px){

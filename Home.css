@@ -1,9 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
-@font-face {
-  font-family: bravery;
-  src: url(fonts/bravery.ttf);
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,11 +6,6 @@
 @font-face {
   font-family: Nunito;
   src: url(fonts/Nunito-Regular.ttf);
-}
-
-@font-face {
-  font-family: WelcomeSummer;
-  src: url(fonts/WelcomeSummer-GOqXP.ttf);
 }
 
 @font-face {
@@ -1070,7 +1059,7 @@ skill .m-4 {
   }
 }
 
-skill .m-1 {
+skill .m-5 {
   -webkit-animation: skill-level-1 4s normal forwards;
           animation: skill-level-1 4s normal forwards;
 }
@@ -1084,7 +1073,7 @@ skill .m-1 {
   }
 }
 
-skill .m-2 {
+skill .m-6 {
   -webkit-animation: skill-level-2 4s normal forwards;
           animation: skill-level-2 4s normal forwards;
 }
@@ -1095,34 +1084,6 @@ skill .m-2 {
   }
   100% {
     width: 60%;
-  }
-}
-
-skill .m-3 {
-  -webkit-animation: skill-level-3 4s normal forwards;
-          animation: skill-level-3 4s normal forwards;
-}
-
-@keyframes skill-level-3 {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 40%;
-  }
-}
-
-skill .m-4 {
-  -webkit-animation: skill-level-4 4s normal forwards;
-          animation: skill-level-4 4s normal forwards;
-}
-
-@keyframes skill-level-4 {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 40%;
   }
 }
 
