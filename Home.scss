@@ -18,12 +18,63 @@
     font-family: NunitoB;
     src: url(fonts/Nunito-Bold.ttf);
 }
+
 $speed: 0.4s;
-$color:#c2213b;
-// $color:#02a8a0;
-// $color:#FB5252;
+:root{
+    --color:#c2213b;
+}
+
+// var(--color):#02a8a0;
+// var(--color):#FB5252;
+
+.theme-but{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1vw;
+    position: absolute;
+    right:2%;
+    width: 7.5vw;
+    top: 5%;
+.theme{
+    border: none;
+    display: block;
+    border-radius: 4px;
+    color: rgb(226, 226, 226);
+    width: 1.5vw;
+    height: 1.5vw;
+    box-shadow: 0px 0px 1vw black;
+    z-index: 2;
+}
+.a-t{
+    background-color: #c2213b;
+
+    &:focus{
+        --color: #c2213b;
+    }
+
+}
+
+.b-t{
+    background-color: #02a8a0;
+    &:focus{
+        --color: #02a8a0;
+    }
+
+}
+
+.c-t{
+    background-color: #FB5252;
+    &:focus{
+        --color: #FB5252;
+    }
+
+}
+}
 .swiper-container {
     width: 100vw;
+    z-index: 0;
+    position: relative;
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
@@ -53,7 +104,7 @@ $color:#c2213b;
             width: 210px;
             clip-path: circle(14% at 18% 22%);
             transition: all 0.6s ease-in-out;
-            cursor: pointer;
+            cursor: none;
             padding: 10px 10px;
             list-style: none;
         
@@ -61,7 +112,7 @@ $color:#c2213b;
             &:hover{
                 clip-path: circle(100%);
                 background: linear-gradient(220deg, #fffefb,#d4d4d4);
-        
+                
             }
         }   
         
@@ -77,7 +128,7 @@ $color:#c2213b;
         
         img{
             &:hover{
-                border-bottom: 2px solid $color;
+                border-bottom: 2px solid var(--color);
             }
             border-bottom: 2px solid #1b1b1b;
             padding: 1vw;
@@ -100,7 +151,7 @@ $color:#c2213b;
         
             .box-block-5{
                 width: 4%;
-                border: 2px solid $color;
+                border: 2px solid var(--color);
                 padding: 4%;
                 z-index: 2;
                 top: 84%;
@@ -145,11 +196,21 @@ $color:#c2213b;
             
         
 }}}
+
+// swipe-container hidden for mob
 @media screen and (max-width: 520px){
 .swiper-container{
     display: none;
 }
 }
+
+// home screen hidden for win
+@media screen and (min-width: 520px){
+    .ursor{
+        display: none;
+    }
+    }
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -174,7 +235,7 @@ $color:#c2213b;
 }
 
 #hello_img{
-    z-index: 100;
+    z-index: 1;
     position: relative;
     top: 40vh;
 
@@ -184,6 +245,7 @@ body::-webkit-scrollbar {
   }
 body{
     // overflow: hidden;
+    cursor: none;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -194,27 +256,49 @@ body{
     overflow-x: hidden;
     z-index: -1000;
 }
-.ursor{
-    display: none;
-}
+
 .cursor{
-    z-index: 2;
-   width: 3rem;
-   height: 3rem;
-   border: 2px solid white;
+    z-index: 3;
+   width: 1rem;
+   height: 1rem;
+   border: 1px solid white;
    border-radius: 50%;
-   position: absolute;
+   position: fixed;
    transform: translate(-50%,-50%);
    pointer-events: none;
-   transition: all 1s ease;
-   transition-property: background, transform;
+//    transform-origin: 100% 100%;
+   transition: all 0.4s ease; // 
+   transition-property: transform,border,backdrop-filter; 
+   
+}  
+
+.joel-mouseover{
+        background-color: rgba(2, 2, 2,0.5);
+        transform: scale(6.2);
+        border: none;
+        mix-blend-mode: overlay;
+        
 }
-.wrapper-cursor{
-   transform: scale(2);
-   background: white;
+.text_x-mouseover{
+
+        backdrop-filter: invert(100%);
+        border: none;
+        transform: scale(4.2);
+        
 }
 
-//https://youtu.be/y9nlfqT4s9s scroll effect
+.image-mouseover{
+        background-color: rgba(2, 2, 2, 0.6);
+        border: none;
+        transform: scale(1.2);
+}
+
+.inner-mouseover{
+
+    background-color: rgba(2, 2, 2,0.6);
+    border: 0px solid rgba(2, 2, 2,0.6);
+    transform: scale(2.2);
+}
 
 #back1lar{
     height: 100%;
@@ -240,6 +324,7 @@ body{
         img{
             height: 40px;
             width: auto;
+            cursor: none;
         }
     }
 
@@ -250,7 +335,7 @@ body{
     width: 210px;
     clip-path: circle(14% at 88% 22%);
     transition: all 0.6s ease-in-out;
-    cursor: pointer;
+    cursor: none;
     padding: 10px 10px;
     list-style: none;
 
@@ -278,18 +363,25 @@ body{
         left: 50%;
         transform: translate(-50%, -50%);
         .Hi{
-            border-bottom: 2px solid $color;
-            color: $color;
-            z-index: 100;
+            border-bottom: 2px solid var(--color);
+            color: var(--color);
+            z-index: 1;
             font-size: 2.4vw;
             margin-top: 45vh;
             .name-user{
                 font-size: 2vw;
                 color: white;
+                
             }
             
         }
-        
+        .bio{
+
+            font-size: 1.2vw;
+            color :grey;
+            margin: 15px;
+
+        }
         #hello_img{
             width: 50%;
             height: auto;
@@ -297,6 +389,7 @@ body{
  
        }}
        @media screen and (max-width: 520px){
+           
         .cursor{
             display: contents;
         }   
@@ -305,22 +398,28 @@ body{
                 width: 100%;
                 .Hi{
                     border-bottom: 1px solid ;
-                    color: $color;
+                    color: var(--color);
                     z-index: 100;
-                    font-size: 5.4vw;
+                    font-size: 6.4vw;
                     margin-left: 20%;
                     width: 60%;
-                    margin-top: 45vh;
+                    margin-top: 42vh;
                     .name-user{
-                        font-size: 4.5vw;
+                        font-size: 5.5vw;
                         color: white;
                     }
                     
                 }
+                .bio{
+
+                    font-size: 3.2vw;
+                    color :grey;
+                    margin: 15px;
+        
+                }
             }
         }
  }
-      
       
 #Container{
     display: none;
@@ -367,7 +466,7 @@ body{
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 2px;
-    background: $color;
+    background: var(--color);
     width: 0%;
   }
 
@@ -426,7 +525,7 @@ body{
                 top: 8vh;
                 display: flex;
                 flex-direction: column;
-                border-bottom: 1px solid $color;
+                border-bottom: 1px solid var(--color);
                 align-items: center;
                 width: 100%;
                 background-color: rgb(21, 21, 21);
@@ -441,7 +540,7 @@ body{
             .mob-button{
 
                 display: block;
-                cursor: pointer;
+                cursor: none;
 
                 
             }
@@ -497,7 +596,7 @@ body{
 	&:hover{
 		
 		&:before{
-            border-bottom: 2px solid $color;
+            border-bottom: 2px solid var(--color);
             
 		}
 	}
@@ -526,7 +625,7 @@ about{
     
     h1{
         
-        color: $color;
+        color: var(--color);
         font-family: Nunito;
         text-align: right;
         padding-right: 2vw;
@@ -539,7 +638,7 @@ about{
     p{
         background: rgba(27, 27, 27, 0.8);
         margin-top: 0%;
-        border-left: 1px solid $color;
+        border-left: 1px solid var(--color);
         font-size: 1.5vw;
         width: 80%;
         color: rgb(226, 226, 226);
@@ -556,7 +655,7 @@ about{
     }
     .box-block-1{
         width: 50%;
-        border: 0.6vw solid $color;
+        border: 0.6vw solid var(--color);
         padding: 42%;
         z-index: 0;
         margin-top:-90%;
@@ -580,7 +679,7 @@ about{
             grid-template-rows: 1fr 0.5fr;
             background: rgba(21, 21, 21,0.8);
             h1{
-                color: $color;
+                color: var(--color);
                 font-family: Nunito;
                 text-align: right;
                 padding-right: 2vw;
@@ -591,7 +690,7 @@ about{
             }
             p{
            
-                border-left: 1px solid $color;
+                border-left: 1px solid var(--color);
                 font-size: 3.8vw;
                 width: 80%;
                 color: rgb(226, 226, 226);
@@ -607,7 +706,7 @@ about{
             }
             .box-block-1{
                 width: 80%;
-                border: 2px solid $color;
+                border: 2px solid var(--color);
                 padding: 45%;
                 z-index: 2;
                 margin-top: 8%;
@@ -663,7 +762,7 @@ experience{
                 font-size: 1.8vw;
                 font-family: Nunito;
                 text-align: center;
-                color: $color;
+                color: var(--color);
                 
             }
             p{
@@ -690,7 +789,7 @@ experience{
             color: rgb(110, 110, 110);
             font-size: 6.5vw;
             text-align: center;
-            border-bottom: 2px solid $color;
+            border-bottom: 2px solid var(--color);
             font-family: Nunito;
         }
         img{
@@ -717,7 +816,7 @@ experience{
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: auto-fit;
-                color: $color;
+                color: var(--color);
     
                 h1{
                     font-size: 5.5vw;
@@ -752,7 +851,7 @@ skill{
 
     .box-block-5{
         width: 4%;
-        border: 2px solid $color;
+        border: 2px solid var(--color);
         padding: 4%;
         z-index: 2;
         top: 84%;
@@ -824,7 +923,7 @@ skill{
         .skill {
             padding-bottom: 6px;
              border-radius: 5px;
-            background: $color; 
+            background: var(--color); 
             height: auto;
             width: 0;
             }
@@ -896,7 +995,7 @@ skill{
     
         .box-block-5{
             width: 4%;
-            border: 2px solid $color;
+            border: 2px solid var(--color);
             padding: 4%;
             z-index: 2;
             top: 84%;
@@ -928,7 +1027,7 @@ skill{
             display: grid;
             
             h1{
-                color:$color;
+                color:var(--color);
                 font-family: 'Cairo', sans-serif;
                 padding-left: 3vw;
                 font-weight: normal;
@@ -969,7 +1068,7 @@ skill{
             .skill {
                 padding-bottom: 6px;
                  border-radius: 5px;
-                background: $color; 
+                background: var(--color); 
                 height: auto;
                 width: 0;
                 }
@@ -985,7 +1084,7 @@ achievements{
 
     h1{
         text-align: center;
-        color:$color;
+        color:var(--color);
         font-family: Nunito;
         font-size: 3.5vw;
     }
@@ -1025,7 +1124,7 @@ achievements{
             img {
                 opacity: 1;
               filter: grayscale(0);
-              border-bottom: solid 0.5vw $color;
+              border-bottom: solid 0.5vw var(--color);
             }
             .cert-sub {
               text-align: center;
@@ -1065,7 +1164,7 @@ achievements{
     
         h1{
             text-align: center;
-            color:$color;
+            color:var(--color);
             font-family: Nunito;
             font-size: 6.5vw;
         }
@@ -1150,7 +1249,7 @@ achievements{
     
     .contact-title{
         text-align: center;
-        color: $color;
+        color: var(--color);
         font-size: 3.5vw;
         font-family: Nunito;
         padding-top: 4vw;
@@ -1167,7 +1266,7 @@ achievements{
         transition: border-top 0.5s;
         border-top: 2px solid rgb(17, 17, 17);
         &:hover{
-            border-top: 2px solid $color;
+            border-top: 2px solid var(--color);
         }
         
         
@@ -1184,6 +1283,7 @@ achievements{
                     position: absolute;
                     width: 5vw;
                     height: 5vw;
+                    cursor: none;
                 }
                 .con a{
                     align-self: center;
@@ -1214,7 +1314,7 @@ achievements{
 
     .contact-title{
         text-align: center;
-        color: $color;
+        color: var(--color);
         font-size: 8vw;
         font-family: Nunito;
         position: relative;
@@ -1269,7 +1369,7 @@ achievements{
     border-radius: 0.6vw;
 }
 .swiper-pagination-bullet-active {
-    background-color: $color;
+    background-color: var(--color);
     border: none;
 }
 .swiper-button-prev {

@@ -24,8 +24,64 @@
   src: url(fonts/Nunito-Bold.ttf);
 }
 
+:root {
+  --color:#c2213b;
+}
+
+.theme-but {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 1vw;
+  position: absolute;
+  right: 2%;
+  width: 7.5vw;
+  top: 5%;
+}
+
+.theme-but .theme {
+  border: none;
+  display: block;
+  border-radius: 4px;
+  color: #e2e2e2;
+  width: 1.5vw;
+  height: 1.5vw;
+  -webkit-box-shadow: 0px 0px 1vw black;
+          box-shadow: 0px 0px 1vw black;
+  z-index: 2;
+}
+
+.theme-but .a-t {
+  background-color: #c2213b;
+}
+
+.theme-but .a-t:focus {
+  --color: #c2213b;
+}
+
+.theme-but .b-t {
+  background-color: #02a8a0;
+}
+
+.theme-but .b-t:focus {
+  --color: #02a8a0;
+}
+
+.theme-but .c-t {
+  background-color: #FB5252;
+}
+
+.theme-but .c-t:focus {
+  --color: #FB5252;
+}
+
 .swiper-container {
   width: 100vw;
+  z-index: 0;
+  position: relative;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -63,7 +119,7 @@
           clip-path: circle(14% at 18% 22%);
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
-  cursor: pointer;
+  cursor: none;
   padding: 10px 10px;
   list-style: none;
 }
@@ -92,7 +148,7 @@
 }
 
 .swiper-container .contact-me img:hover {
-  border-bottom: 2px solid #c2213b;
+  border-bottom: 2px solid var(--color);
 }
 
 .swiper-container .experience {
@@ -111,7 +167,7 @@
 
 .swiper-container .skillswipe skill .box-block-5 {
   width: 4%;
-  border: 2px solid #c2213b;
+  border: 2px solid var(--color);
   padding: 4%;
   z-index: 2;
   top: 84%;
@@ -162,6 +218,12 @@
   }
 }
 
+@media screen and (min-width: 520px) {
+  .ursor {
+    display: none;
+  }
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -179,7 +241,7 @@
 }
 
 #hello_img {
-  z-index: 100;
+  z-index: 1;
   position: relative;
   top: 40vh;
 }
@@ -189,6 +251,7 @@ body::-webkit-scrollbar {
 }
 
 body {
+  cursor: none;
   overflow-y: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -202,32 +265,52 @@ body {
   z-index: -1000;
 }
 
-.ursor {
-  display: none;
-}
-
 .cursor {
-  z-index: 2;
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid white;
+  z-index: 3;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  -webkit-transition-property: background, -webkit-transform;
-  transition-property: background, -webkit-transform;
-  transition-property: background, transform;
-  transition-property: background, transform, -webkit-transform;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition-property: border,-webkit-transform,-webkit-backdrop-filter;
+  transition-property: border,-webkit-transform,-webkit-backdrop-filter;
+  transition-property: transform,border,backdrop-filter;
+  transition-property: transform,border,backdrop-filter,-webkit-transform,-webkit-backdrop-filter;
 }
 
-.wrapper-cursor {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  background: white;
+.joel-mouseover {
+  background-color: rgba(2, 2, 2, 0.5);
+  -webkit-transform: scale(6.2);
+          transform: scale(6.2);
+  border: none;
+  mix-blend-mode: overlay;
+}
+
+.text_x-mouseover {
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+  border: none;
+  -webkit-transform: scale(4.2);
+          transform: scale(4.2);
+}
+
+.image-mouseover {
+  background-color: rgba(2, 2, 2, 0.6);
+  border: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.inner-mouseover {
+  background-color: rgba(2, 2, 2, 0.6);
+  border: 0px solid rgba(2, 2, 2, 0.6);
+  -webkit-transform: scale(2.2);
+          transform: scale(2.2);
 }
 
 #back1lar {
@@ -260,6 +343,7 @@ body {
 #social-link .icon-home img {
   height: 40px;
   width: auto;
+  cursor: none;
 }
 
 #social-link .inner {
@@ -271,7 +355,7 @@ body {
           clip-path: circle(14% at 88% 22%);
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
-  cursor: pointer;
+  cursor: none;
   padding: 10px 10px;
   list-style: none;
 }
@@ -298,9 +382,9 @@ body {
 }
 
 .home #joeljaimon .Hi {
-  border-bottom: 2px solid #c2213b;
-  color: #c2213b;
-  z-index: 100;
+  border-bottom: 2px solid var(--color);
+  color: var(--color);
+  z-index: 1;
   font-size: 2.4vw;
   margin-top: 45vh;
 }
@@ -308,6 +392,12 @@ body {
 .home #joeljaimon .Hi .name-user {
   font-size: 2vw;
   color: white;
+}
+
+.home #joeljaimon .bio {
+  font-size: 1.2vw;
+  color: grey;
+  margin: 15px;
 }
 
 .home #joeljaimon #hello_img {
@@ -324,16 +414,21 @@ body {
   }
   .home #joeljaimon .Hi {
     border-bottom: 1px solid;
-    color: #c2213b;
+    color: var(--color);
     z-index: 100;
-    font-size: 5.4vw;
+    font-size: 6.4vw;
     margin-left: 20%;
     width: 60%;
-    margin-top: 45vh;
+    margin-top: 42vh;
   }
   .home #joeljaimon .Hi .name-user {
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     color: white;
+  }
+  .home #joeljaimon .bio {
+    font-size: 3.2vw;
+    color: grey;
+    margin: 15px;
   }
 }
 
@@ -388,7 +483,7 @@ body {
 
 .wrapper .progress-bar {
   height: 2px;
-  background: #c2213b;
+  background: var(--color);
   width: 0%;
 }
 
@@ -465,7 +560,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-bottom: 1px solid #c2213b;
+    border-bottom: 1px solid var(--color);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -483,7 +578,7 @@ body {
   }
   .wrapper nav .mob-button {
     display: block;
-    cursor: pointer;
+    cursor: none;
   }
   .wrapper nav .btn-flip {
     line-height: 50px;
@@ -548,7 +643,7 @@ body {
 }
 
 .btn-flip:hover:before {
-  border-bottom: 2px solid #c2213b;
+  border-bottom: 2px solid var(--color);
 }
 
 .btn-flip:before {
@@ -577,7 +672,7 @@ about {
 }
 
 about h1 {
-  color: #c2213b;
+  color: var(--color);
   font-family: Nunito;
   text-align: right;
   padding-right: 2vw;
@@ -590,7 +685,7 @@ about h1 {
 about p {
   background: rgba(27, 27, 27, 0.8);
   margin-top: 0%;
-  border-left: 1px solid #c2213b;
+  border-left: 1px solid var(--color);
   font-size: 1.5vw;
   width: 80%;
   color: #e2e2e2;
@@ -608,7 +703,7 @@ about img {
 
 about .box-block-1 {
   width: 50%;
-  border: 0.6vw solid #c2213b;
+  border: 0.6vw solid var(--color);
   padding: 42%;
   z-index: 0;
   margin-top: -90%;
@@ -637,7 +732,7 @@ about .box-block-3 {
     background: rgba(21, 21, 21, 0.8);
   }
   about h1 {
-    color: #c2213b;
+    color: var(--color);
     font-family: Nunito;
     text-align: right;
     padding-right: 2vw;
@@ -647,7 +742,7 @@ about .box-block-3 {
     border-bottom: 2px solid #6e6e6e;
   }
   about p {
-    border-left: 1px solid #c2213b;
+    border-left: 1px solid var(--color);
     font-size: 3.8vw;
     width: 80%;
     color: #e2e2e2;
@@ -662,7 +757,7 @@ about .box-block-3 {
   }
   about .box-block-1 {
     width: 80%;
-    border: 2px solid #c2213b;
+    border: 2px solid var(--color);
     padding: 45%;
     z-index: 2;
     margin-top: 8%;
@@ -722,7 +817,7 @@ experience .on-exp #exp-panel .sec-exp h1 {
   font-size: 1.8vw;
   font-family: Nunito;
   text-align: center;
-  color: #c2213b;
+  color: var(--color);
 }
 
 experience .on-exp #exp-panel .sec-exp p {
@@ -742,7 +837,7 @@ experience .on-exp #exp-panel .sec-exp img {
     color: #6e6e6e;
     font-size: 6.5vw;
     text-align: center;
-    border-bottom: 2px solid #c2213b;
+    border-bottom: 2px solid var(--color);
     font-family: Nunito;
   }
   experience img {
@@ -776,7 +871,7 @@ experience .on-exp #exp-panel .sec-exp img {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto-fit;
         grid-template-rows: auto-fit;
-    color: #c2213b;
+    color: var(--color);
   }
   experience .on-exp #exp-panel .sec-exp h1 {
     font-size: 5.5vw;
@@ -803,7 +898,7 @@ skill {
 
 skill .box-block-5 {
   width: 4%;
-  border: 2px solid #c2213b;
+  border: 2px solid var(--color);
   padding: 4%;
   z-index: 2;
   top: 84%;
@@ -878,7 +973,7 @@ skill .progress {
 skill .skill {
   padding-bottom: 6px;
   border-radius: 5px;
-  background: #c2213b;
+  background: var(--color);
   height: auto;
   width: 0;
 }
@@ -1038,7 +1133,7 @@ skill .m-4 {
   }
   skill .box-block-5 {
     width: 4%;
-    border: 2px solid #c2213b;
+    border: 2px solid var(--color);
     padding: 4%;
     z-index: 2;
     top: 84%;
@@ -1071,7 +1166,7 @@ skill .m-4 {
     display: grid;
   }
   skill .pskill h1 {
-    color: #c2213b;
+    color: var(--color);
     font-family: 'Cairo', sans-serif;
     padding-left: 3vw;
     font-weight: normal;
@@ -1106,7 +1201,7 @@ skill .m-4 {
   skill .skill {
     padding-bottom: 6px;
     border-radius: 5px;
-    background: #c2213b;
+    background: var(--color);
     height: auto;
     width: 0;
   }
@@ -1124,7 +1219,7 @@ achievements {
 
 achievements h1 {
   text-align: center;
-  color: #c2213b;
+  color: var(--color);
   font-family: Nunito;
   font-size: 3.5vw;
 }
@@ -1182,7 +1277,7 @@ achievements .certi-view .certi:hover img {
   opacity: 1;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-  border-bottom: solid 0.5vw #c2213b;
+  border-bottom: solid 0.5vw var(--color);
 }
 
 achievements .certi-view .certi:hover .cert-sub {
@@ -1225,7 +1320,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
   }
   achievements h1 {
     text-align: center;
-    color: #c2213b;
+    color: var(--color);
     font-family: Nunito;
     font-size: 6.5vw;
   }
@@ -1324,7 +1419,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
 
 .contact-me .contact-me-content .contact-title {
   text-align: center;
-  color: #c2213b;
+  color: var(--color);
   font-size: 3.5vw;
   font-family: Nunito;
   padding-top: 4vw;
@@ -1344,7 +1439,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
 }
 
 .contact-me .contact-me-content .contact-section:hover {
-  border-top: 2px solid #c2213b;
+  border-top: 2px solid var(--color);
 }
 
 .contact-me .contact-me-content .contact-section .social {
@@ -1364,6 +1459,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
   position: absolute;
   width: 5vw;
   height: 5vw;
+  cursor: none;
 }
 
 .contact-me .contact-me-content .contact-section .social .con a {
@@ -1388,7 +1484,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
   }
   .contact-me .contact-me-content .contact-title {
     text-align: center;
-    color: #c2213b;
+    color: var(--color);
     font-size: 8vw;
     font-family: Nunito;
     position: relative;
@@ -1442,7 +1538,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #c2213b;
+  background-color: var(--color);
   border: none;
 }
 
