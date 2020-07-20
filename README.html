@@ -1,1 +1,455 @@
-# Dark_Portfolio_Template-V1
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset = "utf-8">
+		<meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <title>Home</title>
+    <script src="/panel-item.js"></script>
+    <link rel="stylesheet" href="/swiper-bundle.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="three-dots.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" type = "text/css" href ="Home.css">
+    <div class = "do">
+      
+      <div class="dot">
+      <div class="dot-bricks"></div>
+      </div>
+    </div>
+
+  </head>
+
+    <body id = "body">
+      <div class = "ursor">
+      <img src="/image/clay-banks-u27Rrbs9Dwc-unsplash.jpg" id="myVideo">
+
+        <div id="social-link">
+          <div class="inner">
+            <span><img src=""></span>
+              <div class = "icon-home">
+                <div class = "instagram">
+                  <a href="https://www.instagram.com/joel__jaimon/" title="Instagram">
+                  <img src="/icons/instagram-sketched.png">
+              
+                  </a>
+                </div>
+                <div class = "linkedin">
+                  <a href="https://www.linkedin.com/in/joel-jaimon/" title="LinkedIn">
+                  <img src="/icons/linkedin.png">
+                  
+                  </a>
+                </div>
+                <div class = "github">
+                  <a href="https://github.com/joel-jaimon" title="Github">
+                  <img src="/icons/github.png">
+                  
+                  </a>
+                </div>
+                
+              </div>
+          </div> 
+        </div>
+        <div class="home"><div id = "joeljaimon">
+          <div><img src="/image/My_Profile/brooke-cagle-kvKSL7B6eTo-unsplash.png" id ="hello_img"></div>
+          <div class="Hi"><a >A</a><a class="name-user">ngelina</a></div>
+          <div class="bio"><a>Student , Web Developer</a></div>
+        </div></div>
+      </div>
+      <div id = "Container"> 
+        
+        <div class="wrapper">
+          <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+           </div>
+        <nav>
+        <div class = "logo">
+            <h4>My Portfolio</h4>
+          </div>
+          <ul class="nav-links">
+          <li><a href=# class="btn-flip"  data-front="About Me"></a></li>
+          <li><a href="#" class="btn-flip"  data-front="skills"></a></li>
+          <li><a href="#" class="btn-flip"  data-front="achievements"></a></li>
+          <li><a href="#" class="btn-flip"  data-front="contact"></a></li>
+          </ul>     
+          <div class="mob-button">
+            <div class="linea"></div>
+            <div class="lineb"></div>
+            <div class="linec"></div>
+          </div>
+        </nav>
+        </div>
+        
+        <about>
+          
+          <div>
+            
+            <img src="/image/My_Profile/peter-sjo-Nxy-6QwGMzA-unsplash.jpg">
+          </div>
+          <div class="about-content"><h1>About Me</h1><br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni provident excepturi adipisci sapiente iure culpa aperiam dolor quod nesciunt! Consequatur, sint ullam! Reiciendis, numquam perspiciatis quisquam sequi odit eos odio!</p></div>
+          
+          <span class="box-block-1"></span>
+          <span class="box-block-2"></span>
+          <span class="box-block-3"></span>
+        </about>
+
+        <experience>
+          
+          <img src="/image/paul-gilmore-8kDOOrs608I-unsplash.jpg">
+          <div class="on-exp">
+            <h1>My Experience</h1>
+          <div id="exp-panel">
+            <div class="sec-exp">
+              <h1>Event Organiser<h1>
+                <img src="/icons/event.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum maiores nisi, vitae enim assumenda libero quasi cupiditate quo excepturi eligendi. Reprehenderit totam voluptate aliquid voluptates? Dignissimos beatae laboriosam rem.</p>
+            </div>
+
+            <div class="sec-exp">
+              <h1>Web Developer Intern<h1>
+                <img src="/icons/programming (1).png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum maiores nisi, vitae enim assumenda libero quasi cupiditate quo excepturi eligendi. Reprehenderit totam voluptate aliquid voluptates? Dignissimos beatae laboriosam rem.</p>
+            </div>
+
+            <div class="sec-exp">
+              <h1>AI Intern<h1>
+                <img src="/icons/ai.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum maiores nisi, vitae enim assumenda libero quasi cupiditate quo excepturi eligendi. Reprehenderit totam voluptate aliquid voluptates? Dignissimos beatae laboriosam rem.</p>
+            </div>
+          </div>
+          </div>
+        </experience>
+
+        <achievements>
+          <h1>Achievement</h1>
+          <div class="certi-view">
+          <div class="certi">
+            <img src="/Certificates/1.jpg">
+            <div class="cert-sub">Sample Cert 1</div>
+          </div>
+          <div class="certi">
+            <img src="/Certificates/2.png">
+            <div class="cert-sub">Sample Cert 2</div>
+          </div>
+          <div class="certi">
+            <img src="/Certificates/3.png">
+            <div class="cert-sub">Sample Cert 3</div>
+          </div>
+          <div class="certi">
+            <img src="/Certificates/4.jpg">
+            <div class="cert-sub">Sample Cert 4</div>
+          </div>
+          <div class="certi">
+            <img src="/Certificates/5.png">
+            <div class="cert-sub">Sample Cert 5</div>
+          </div>
+          <div class="certi">
+            <img src="/Certificates/6.png">
+            <div class="cert-sub">Sample Cert 6</div>
+          </div>
+        </div>
+        </achievements>
+
+        
+        <skill>
+          <img src="/image/emile-perron-xrVDYZRGdw4-unsplash.jpg">
+ 
+            <span class="box-block-5"></span>
+
+          <div id="skill-mod">
+          <div class= "pskill"><h1 class="ti">My Expertise</h1>
+            
+            <div class="Other-skills">
+              <a>HTML/CSS</a>
+              <div class="progress"><div class="skill m-1"></div></div>
+            </div>
+            <div class="Other-skills">
+              <a>JavaScript</a>
+              <div class="progress"><div class="skill m-2"></div></div>
+            </div>
+            <div class="Other-skills">
+              <a>Framework(Django)</a>
+              <div class="progress"><div class="skill m-3"></div></div>
+            </div>
+            <div class="Other-skills">
+              <a>Database(SQL)</a>
+              <div class="progress"><div class="skill m-4"></div></div>
+            </div>
+            <div class="Other-skills">
+              <a>HTML/CSS</a>
+              <div class="progress"><div class="skill m-1"></div></div>
+            </div>
+            <div class="Other-skills">
+              <a>JavaScript</a>
+              <div class="progress"><div class="skill m-2"></div></div>
+            </div>
+
+            </div>
+            </div>
+        </skill>
+
+        <!-- <projects>
+          <div><h1>My Experience</h1></div>
+          <div>
+          </div>
+        </projects> -->
+
+
+        
+          </div>
+          <div class="contact-me">
+  <div class="contact-me-content">
+  <div class="contact-title">
+    <a>Contact Me</a></div>
+  <div id="email"><a>dummy@gmail.com</a></div>
+  <div class="contact-section">
+    
+    <div class="social">
+     
+      <div class = "con">
+        <a href="https://www.instagram.com/joel__jaimon/" title="Instagram">
+        <img src="/icons/instagram-sketched.png">
+    
+        </a>
+      </div>
+      <div class = "con">
+        <a href="https://www.linkedin.com/in/joel-jaimon/" title="LinkedIn">
+        <img src="/icons/linkedin.png">
+        
+        </a>
+      </div>
+      <div class = "con">
+        <a href="https://github.com/joel-jaimon" title="Github">
+        <img src="/icons/github.png">
+        </a>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+
+
+    <!-- Swiper -->
+    
+    <div class="swiper-container">
+      <div class="theme-but">
+      <button class="theme a-t" data-color="#c2213b"><a></a></button>
+      <button class="theme b-t" data-color="#02a8a0"><a></a></button>
+      <button class="theme c-t" data-color="#FB5252"><a></a></button>
+      </div>
+
+      <div class="cursor"></div>
+      <div class="swiper-wrapper">
+          <div class="swiper-slide homepage">
+            <img src="/image/clay-banks-u27Rrbs9Dwc-unsplash.jpg" id="myVideo">
+        <div id="social-link">
+          <div class="inner">
+            <span><img src=""></span>
+              <div class = "icon-home">
+                <div class = "instagram">
+                  <a href="https://www.instagram.com/joel__jaimon/" title="Instagram">
+                  <img src="/icons/instagram-sketched.png">
+              
+                  </a>
+                </div>
+                <div class = "linkedin">
+                  <a href="https://www.linkedin.com/in/joel-jaimon/" title="LinkedIn">
+                  <img src="/icons/linkedin.png">
+                  
+                  </a>
+                </div>
+                <div class = "github">
+                  <a href="https://github.com/joel-jaimon" title="Github">
+                  <img src="/icons/github.png">
+                  
+                  </a>
+                </div>
+                
+              </div>
+          </div> 
+        </div>
+        <div class="home"><div id = "joeljaimon">
+          <div><img src="/image/My_Profile/brooke-cagle-kvKSL7B6eTo-unsplash.png" id ="hello_img"></div>
+          <div class="Hi head"><a >A</a><a class="name-user">ngelina</a></div>
+          <div class="bio"><a>Student , Web Developer</a></div>
+        </div></div>
+        
+          </div>
+          <div class="swiper-slide aboutmes">
+            <about>
+          
+              <div>
+                
+                <img src="/image/My_Profile/peter-sjo-Nxy-6QwGMzA-unsplash.jpg">
+              </div>
+              <div><h1><a class="head">About Me</a></h1><br>
+              <p class="pmo"><a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni provident excepturi adipisci sapiente iure culpa aperiam dolor quod nesciunt! Consequatur, sint ullam! Reiciendis, numquam perspiciatis quisquam sequi odit eos odio!</a></p></div>
+              <span class="box-block-1"></span>
+              <span class="box-block-2"></span>
+              <span class="box-block-3"></span>
+            </about>
+          </div>
+          <div class="swiper-slide experience">
+            <experience>
+          
+              <img src="/image/paul-gilmore-8kDOOrs608I-unsplash.jpg">
+              <div class="on-exp">
+                <h1><a class="head">My Experience</a></h1>
+              <div id="exp-panel">
+                <div class="sec-exp">
+                  <h1>Event Organiser<h1>
+                    <img src="/icons/event.png">
+                    <p><a class="pmo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum maiores nisi, vitae enim assumenda libero quasi cupiditate quo excepturi eligendi. Reprehenderit totam voluptate aliquid voluptates? Dignissimos beatae laboriosam rem.</a></p>
+                </div>
+    
+                <div class="sec-exp">
+                  <h1>Web Developer Intern<h1>
+                    <img src="/icons/programming (1).png">
+                    <p><a class="pmo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum maiores nisi, vitae enim assumenda libero quasi cupiditate quo excepturi eligendi. Reprehenderit totam voluptate aliquid voluptates? Dignissimos beatae laboriosam rem.</a></p>
+                </div>
+    
+                <div class="sec-exp">
+                  <h1>AI Intern<h1>
+                    <img src="/icons/ai.png">
+                    <p><a class="pmo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum maiores nisi, vitae enim assumenda libero quasi cupiditate quo excepturi eligendi. Reprehenderit totam voluptate aliquid voluptates? Dignissimos beatae laboriosam rem.</a></p>
+                </div>
+              </div>
+              </div>
+            </experience>
+          </div>
+          <div class="swiper-slide achievements">
+            <achievements>
+              <h1><a class="head">Achievement</a></h1>
+              <div class="certi-view">
+              <div class="certi">
+                <img src="/Certificates/1.jpg">
+                <div class="cert-sub">Sample Cert 1</div>
+              </div>
+              <div class="certi">
+                <img src="/Certificates/2.png">
+                <div class="cert-sub">Sample Cert 2</div>
+              </div>
+              <div class="certi">
+                <img src="/Certificates/3.png">
+                <div class="cert-sub">Sample Cert 3</div>
+              </div>
+              <div class="certi">
+                <img src="/Certificates/4.jpg">
+                <div class="cert-sub">Sample Cert 4</div>
+              </div>
+              <div class="certi">
+                <img src="/Certificates/5.png">
+                <div class="cert-sub">Sample Cert 5</div>
+              </div>
+              <div class="certi">
+                <img src="/Certificates/6.png">
+                <div class="cert-sub">Sample Cert 6</div>
+              </div>
+            </div>
+            </achievements>
+          </div>
+          <div class="swiper-slide skillswipe">
+            <skill>
+              <img src="/image/emile-perron-xrVDYZRGdw4-unsplash.jpg">
+     
+                <span class="box-block-5"></span>
+    
+              <div id="skill-mod">
+              <div class= "pskill"><h1 class="ti"><a class="head">My Expertise</a></h1>
+                
+                <div class="Other-skills">
+                  <a>HTML/CSS</a>
+                  <div class="progress"><div class="skill m-1"></div></div>
+                </div>
+                <div class="Other-skills">
+                  <a>JavaScript</a>
+                  <div class="progress"><div class="skill m-2"></div></div>
+                </div>
+                <div class="Other-skills">
+                  <a>Framework(Django)</a>
+                  <div class="progress"><div class="skill m-3"></div></div>
+                </div>
+                <div class="Other-skills">
+                  <a>Database(SQL)</a>
+                  <div class="progress"><div class="skill m-4"></div></div>
+                </div>
+                <div class="Other-skills">
+                  <a>HTML/CSS</a>
+                  <div class="progress"><div class="skill m-1"></div></div>
+                </div>
+                <div class="Other-skills">
+                  <a>JavaScript</a>
+                  <div class="progress"><div class="skill m-2"></div></div>
+                </div>
+    
+                </div>
+                </div>
+            </skill>
+          </div>
+          <div class="swiper-slide">
+            <div class="contact-me">
+              <div class="contact-me-content">
+              <div class="contact-title">
+                <a class="head">Contact Me</a></div>
+              <div id="email"><a>dummy@gmail.com</a></div>
+              <div class="contact-section">
+                
+                <div class="social">
+                 
+                  <div class = "con image-mouse">
+                    <a href="https://www.instagram.com/joel__jaimon/" title="Instagram">
+                    <img src="/icons/instagram-sketched.png">
+                
+                    </a>
+                  </div>
+                  <div class = "con image-mouse">
+                    <a href="https://www.linkedin.com/in/joel-jaimon/" title="LinkedIn">
+                    <img src="/icons/linkedin.png">
+                    
+                    </a>
+                  </div>
+                  <div class = "con image-mouse">
+                    <a href="https://github.com/joel-jaimon" title="Github">
+                    <img src="/icons/github.png">
+                    </a>
+                  </div>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+        <script src="/js/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+        });
+        </script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/nav-mob.js"></script>
+        <script src ="js/nav-scroll.js"></script>
+        <script src="js/cursor.js"></script>
+        
+      </body>
+</html>
