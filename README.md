@@ -1,4 +1,4 @@
-<h1>Dark_Portfolio_Design</h1>
+<h1>Dark_Portfolio_Template</h1>
 <ul>
 <li>Just add you profile pic and texts.</li>
 <li>Toggle between 3 themes.</li>
