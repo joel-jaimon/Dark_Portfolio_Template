@@ -1455,6 +1455,23 @@ achievements .certi-view .certi:not(:nth-child(6)) {
 }
 
 @media screen and (max-width: 520px) {
+  #license {
+    z-index: 3;
+    position: absolute;
+    font-size: 20px;
+    font-family: Nunito;
+    bottom: 22px;
+    width: 60%;
+    margin-left: 24%;
+    color: grey;
+  }
+  #license a {
+    color: var(--color);
+    text-decoration: none;
+  }
+  #license a:active {
+    color: var(--color);
+  }
   .contact-me {
     display: contents;
     background-color: #161616;
@@ -1466,7 +1483,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
   .contact-me .contact-me-content #email {
     color: #6e6e6e;
     font-family: Nunito;
-    font-size: 3.6vw;
+    font-size: 4vw;
     text-align: center;
   }
   .contact-me .contact-me-content .contact-title {
@@ -1484,7 +1501,7 @@ achievements .certi-view .certi:not(:nth-child(6)) {
     position: relative;
     width: 80vw;
     margin-top: 2%;
-    margin-left: 9vw;
+    margin-left: 10vw;
   }
   .contact-me .contact-me-content .contact-section .social {
     display: -webkit-box;
