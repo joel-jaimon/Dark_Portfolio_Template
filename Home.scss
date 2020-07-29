@@ -1216,6 +1216,10 @@ achievements{
         font-family: Nunito;
         font-size: 1.2vw;
         text-align: center;
+        a{
+            text-decoration: none;
+            color: rgb(110, 110, 110);
+        }
     }
     
     
@@ -1296,8 +1300,8 @@ achievements{
 
 .contact-me-content{
 
-    height: 200px;
-
+    height: 300px;
+    margin-top: 100px;
 
     #email{
         color: rgb(110, 110, 110);
@@ -1310,15 +1314,17 @@ achievements{
     .contact-title{
         text-align: center;
         color: var(--color);
-        font-size: 8vw;
+        font-size: 8.5vw;
         font-family: Nunito;
         position: relative;
+        padding: 0.5em;
+        
     }
 
     .contact-section{
         z-index: 100;
         background-color: #181818;
-        height: 200px;
+        height: 300px;
         position: relative;
         width: 80vw;
         margin-top: 2%;
@@ -1337,8 +1343,8 @@ achievements{
                 img{
                     
                     position: absolute;
-                    width: 7.5vw;
-                    height: 7.5vw;
+                    width: 8vw;
+                    height: 8vw;
                     
                 }
                 .con a{
