@@ -1293,6 +1293,28 @@ achievements{
 
 @media screen and (max-width: 520px){
     
+    #license{
+        z-index: 3;
+        position: absolute;
+        font-size: 20px;
+        font-family: Nunito;
+        bottom: 22px;
+        width: 52%;
+        margin-left: 24.5%;
+        color: grey;
+        a{
+            color: var(--color);
+            text-decoration: none;
+            
+    
+            &:active{
+    
+                color: var(--color);
+    
+            }
+        }
+    }
+
 .contact-me{
     display: contents;
     background-color: rgba(22, 22, 22,1);
