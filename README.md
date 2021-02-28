@@ -6,6 +6,5 @@ Its responsive and you can toggle between three themes. I used DOM event handler
 <li>Just add you profile pic and texts.</li>
 <li>Toggle between 3 themes.</li>
 </ul>
-<img src="/1.PNG">
-<img src="/2.PNG">
-<img src="/3.PNG">
+
+![](Demo.gif)
